@@ -1,11 +1,11 @@
 ## Welcome to Pierre du Plessis's Website
 
 # Personal Details
-Full Name: Pierre du Plessis
-Cell phone: 072 593 4939
-E-mail: u18113941@tuks.co.za
-Date of Birth: 02/04/1999
-Current Position Team Omega: Converter leader
+- Full Name: Pierre du Plessis
+- Cell phone: 072 593 4939
+- E-mail: u18113941@tuks.co.za
+- Date of Birth: 02/04/1999
+- Current Position Team Omega: Converter leader
 
 # Introduction
 I am a hardworking and ambitious individual with a great passion for solving problems. I am
