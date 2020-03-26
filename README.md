@@ -1,37 +1,35 @@
-## Welcome to GitHub Pages
+## Welcome to Pierre du Plessis's Website
 
-You can use the [editor on GitHub](https://github.com/EndlessProgrammer/pierregduplessis.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+# Personal Details
+Full Name: Pierre du Plessis
+Cell phone: 072 593 4939
+E-mail: u18113941@tuks.co.za
+Date of Birth: 02/04/1999
+Current Position Team Omega: Converter leader
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# Introduction
+I am a hardworking and ambitious individual with a great passion for solving problems. I am
+currently in my 3rd year of studying BSc Computer science at the University of Pretoria. I have
+excellent communication skills, enabling me to effectively communicate with a wide range of
+people.
 
-### Markdown
+# Education
+Currently, a scholar at the University of Pretoria, studying a Bachelor of Science in Computer
+Science (3rd Year of Study).
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+# Skills
+## Coding Skills
+● Code skills
+● Java
+● C++
+● Assembly
+● HTML, CSS, JS & PHP
+● Android
+## Core Skills
+● Goal-oriented
+● Problem-solving
+● Adaptable
+● Creative
+● Teamwork
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/EndlessProgrammer/pierregduplessis.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+# Work Experience: N/A
