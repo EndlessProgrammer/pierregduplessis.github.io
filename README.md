@@ -19,17 +19,17 @@ Science (3rd Year of Study).
 
 # Skills
 ## Coding Skills
-● Code skills
-● Java
-● C++
-● Assembly
-● HTML, CSS, JS & PHP
-● Android
+- Code skills
+- Java
+- C++
+- Assembly
+- HTML, CSS, JS & PHP
+- Android
 ## Core Skills
-● Goal-oriented
-● Problem-solving
-● Adaptable
-● Creative
-● Teamwork
+- Goal-oriented
+- Problem-solving
+- Adaptable
+- Creative
+- Teamwork
 
 # Work Experience: N/A
