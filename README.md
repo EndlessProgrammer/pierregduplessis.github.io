@@ -19,7 +19,6 @@ Science (3rd Year of Study).
 
 # Skills
 ## Coding Skills
-- Code skills
 - Java
 - C++
 - Assembly
