@@ -50,18 +50,35 @@ ul.navbar {
     background-image: radial-gradient(closest-corner at 50% 97%, red, rgba(255, 255, 0, 0), rgba(0, 0, 0, 0));
   }
 
-/* Faded Line */ 
-.fade_rule {
-  height: 1px;
-  background-color: #E6E6E6;
-  width: 22.0em;
-  margin: 0 auto;
-  background-image: linear-gradient(left , #414345 2%, rgb(255, 0, 0) 50%, #414345 98%);
-  background-image: -o-linear-gradient(left , #414345 2%, rgb(255, 0, 0) 50%, #414345 98%);
-  background-image: -moz-linear-gradient(left , #414345 2%, rgb(255, 0, 0) 50%, #414345 98%);
-  background-image: -webkit-linear-gradient(left , #414345 2%, rgb(255, 0, 0) 50%, #414345 98%);
-  background-image: -ms-linear-gradient(left , #414345 2%, rgb(255, 0, 0) 50%, #414345 98%);
-  background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, #232526), color-stop(0.5, rgb(255, 0, 0)), color-stop(0.98, #414345) );
+/* typewriter effect */
+h1.typewriter  {
+  color: rgb(255, 255, 255);
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .12em solid rgb(223, 0, 0); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  max-width: 34vh;
+  float: left;
+  margin-right: 100%;
+  left: 0;
+  font-size: 4vh;
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 3% }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(255, 0, 0) }
 }
 
 /* Main Info Div*/
@@ -71,15 +88,13 @@ div.mainInfo{
   position: absolute;
   top: 36vh;
   left: 70vh;
-  width: 40em;
-  font-size: 1.5em;
+  width: 50%;
+  font-size: 2.5vh;
   justify-content:left;
   text-justify: auto;
 }
 
-div.mainInfo h1{
-  color: rgb(255, 0, 0);
-}
+
 
 /* Ciricle */
 
@@ -294,7 +309,7 @@ div.circle {
   }
 }
 
-/* Button */
+/* Download Button */
 .title {
   margin-top: 50px;
   font-family: Arial;
@@ -309,22 +324,24 @@ background: linear-gradient(135deg,  rgb(234, 197, 197) 0%,rgb(215, 138, 138) 31
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c5deea', endColorstr='#066dab',GradientType=1 );
 
 }
+
 .cont_centrar {
-  position: absolute;
-  width: 300px;
-  height: 100px;
+  position: relative;
+  height: 20vh;
 /*   background-color: #eee; */
-  top:30vh;
-  left: 20%;
+  top:5vh;
+  left: 16vh;
   margin-left: -150px;
   margin-top: -50px;
   cursor: pointer;
+  line-height: 100px;
 }
 
 .texto_centro {
   margin-top: 40px;
-  font-size: 20px;
-font-weight: 800;
+  font-size: 2vh;
+  font-weight: 800;
+  width: 28%;
   font-family: Arial;
   color: #fff;
   text-align: center;
@@ -336,8 +353,10 @@ animation: text_anim 0.3s infinite  alternate;
 
 #svg4174 {
   position: absolute;
-  top:0px;
-  left: 0px;
+  top:0%;
+  left: 0%;
+  width: 28%;
+  border-radius: 4em;
 }
 .activebtn_fin   #rect4147 {  
   transition: all 0.5s;
@@ -508,3 +527,162 @@ animation-delay: 2s;
     position: absolute;
     top: 33px;
 }
+
+/* Time Line */
+* .timeline{
+  box-sizing: border-box;
+}
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  margin: 0em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  min-height: 100vh;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: rgba(255, 255, 255, 0.822);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  border-radius: 2em;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.timeline .container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 40% ;
+  margin-left: 0em ;
+}
+
+/* The circles on the timeline */
+.timeline .container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #ff0000;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 9.78%;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -13px;
+}
+
+/* The actual content */
+.timeline .content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+.timeline .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+ .timeline .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
+}
+
+/* Skill bars */
+.skillbar {
+  min-height: 100vh;
+}
+
+.skillbar .container {
+  width: 70%;
+  background-color: #ddd;
+}
+
+.skillbar p, .skillbar h1{
+  color: white;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.html {width: 90%; background-color: #4CAF50;}
+.css {width: 80%; background-color: #2196F3;}
+.js {width: 65%; background-color: #f44336;}
+.php {width: 60%; background-color: #808080;}
