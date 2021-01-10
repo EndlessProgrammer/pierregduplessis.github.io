@@ -13,14 +13,13 @@
     <script src="functions.js"></script>
 </head>
 <body>
-    <ul class="navbar">
-        <li><a href="">Contact</a></li>
-        <li><a href="#timeline">Work Experience</a></li>
+    <ul class="navbar" id="about">
+        <li><a href="#timeline">Timeline</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="">About Me</a></li>
+        <li><a href="#about">About Me</a></li>
     </ul>
     <div class="imgbox">
-        <img class="selfie" src="selfie3.jpeg" alt="No Image Found">
+        <img class="selfie" src="selfie.jpeg" alt="No Image Found">
     </div>
 
     <div class="circle">Pierre Du Plessis</div>
@@ -35,7 +34,7 @@
             </p>
         </div>
         <!-- Download button -->
-
+        <a href="Curriculum Vitae - Pierre du Plessis.pdf" target="_blank" download>
         <div class="cont_centrar" onclick=" btn_active()" >
             <p class="texto_centro">DOWNLOAD CV</p>
           <svg 
@@ -57,106 +56,198 @@
                stroke-linecap="round"
                style="opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:5.70997715;stroke-miterlimit:4; stroke-opacity:1" />   
             </svg>
-            <svg
-          
-           xmlns:svg="http://www.w3.org/2000/svg"
-           xmlns="http://www.w3.org/2000/svg"
-           version="1.1"
-           id="svg2"
-           viewBox="0 0 20 20.000001"
-           height="32"
-           width="32">
-          <defs
-             id="defs4" />
-          <metadata
-             id="metadata7">
-            <rdf:RDF>
-              <cc:Work
-                 rdf:about="">
-                <dc:format>image/svg+xml</dc:format>
-                <dc:type
-                   rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-                <dc:title></dc:title>
-              </cc:Work>
-            </rdf:RDF>
-          </metadata>
-          <g
-             transform="translate(0,-1032.3622)"
-             id="layer1">
-            <path
-               id="path4138"
-               d="m 0.89488966,1042.5048 5.36642974,5.4927 12.8794496,-11.9324"
-               style="fill:none;fill-rule:evenodd;stroke:rgb(255, 0, 0);stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1" />
-          </g>
-        </svg>
           </div> 
         </div> 
+      </a>
         
         
     
-    <!-- Skillbars
-    <div class="skillbar" id="skills">
-      <h1>My Skills</h1>
-
-      <p>HTML</p>
-      <div class="container">
-        <div class="skills html">90%</div>
+    <!-- Skillbars -->
+    <div class="skill-bar-page" id="skills">
+    <div class="skill-bars">
+      <h1>Web Development</h1>
+      <div class="bar">
+        <div class="info">
+          <span>XML</span>
+        </div>
+        <div class="progress-line xml">
+          <span></span>
+        </div>
       </div>
-
-      <p>CSS</p>
-      <div class="container">
-        <div class="skills css">80%</div>
+      <div class="bar">
+        <div class="info">
+          <span>CSS</span>
+        </div>
+        <div class="progress-line css">
+          <span></span>
+        </div>
       </div>
-
-      <p>JavaScript</p>
-      <div class="container">
-        <div class="skills js">65%</div>
+      <div class="bar">
+        <div class="info">
+          <span>HTML</span>
+        </div>
+        <div class="progress-line html">
+          <span></span>
+        </div>
       </div>
-
-      <p>PHP</p>
-      <div class="container">
-        <div class="skills php">60%</div>
+      <div class="bar">
+        <div class="info">
+          <span>Ruby</span>
+        </div>
+        <div class="progress-line ruby">
+          <span></span>
+        </div>
       </div>
-    </div>-->
-    <!-- Timeline
+      <div class="bar">
+        <div class="info">
+          <span>PHP</span>
+        </div>
+        <div class="progress-line php">
+          <span></span>
+        </div>
+      </div>
+      <div class="bar">
+        <div class="info">
+          <span>NodeJS</span>
+        </div>
+        <div class="progress-line nodejs">
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-bars">
+      <h1>Programming Languages</h1>
+      <div class="bar">
+        <div class="info">
+          <span>C++</span>
+        </div>
+        <div class="progress-line c_plus">
+          <span></span>
+        </div>
+      </div>
+      <div class="bar">
+        <div class="info">
+          <span>Java</span>
+        </div>
+        <div class="progress-line java">
+          <span></span>
+        </div>
+      </div>
+      <div class="bar">
+        <div class="info">
+          <span>Delphi</span>
+        </div>
+        <div class="progress-line delphi">
+          <span></span>
+        </div>
+      </div>
+      <div class="bar">
+        <div class="info">
+          <span>Assembly</span>
+        </div>
+        <div class="progress-line assembly">
+          <span></span>
+        </div>
+      </div>
+      <div class="bar">
+        <div class="info">
+          <span>SQL</span>
+        </div>
+        <div class="progress-line sql">
+          <span></span>
+        </div>
+      </div>
+      <div class="bar">
+        <div class="info">
+          <span>COBOL</span>
+        </div>
+        <div class="progress-line cobol">
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="skill-bars">
+      <h1>Technologies</h1>
+      <div class="bar">
+        <div class="info">
+          <span>Cyber Security</span>
+        </div>
+        <div class="progress-line cybersec">
+          <span></span>
+        </div>
+      </div>
+      <div class="bar">
+        <div class="info">
+          <span>Networks</span>
+        </div>
+        <div class="progress-line networks">
+          <span></span>
+        </div>
+      </div>
+      <div class="bar">
+        <div class="info">
+          <span>Artificial Intelligence</span>
+        </div>
+        <div class="progress-line ai">
+          <span></span>
+        </div>
+      </div>
+      <div class="bar">
+        <div class="info">
+          <span>Mobile development</span>
+        </div>
+        <div class="progress-line mobiledev">
+          <span></span>
+        </div>
+      </div>
+      <div class="bar">
+        <div class="info">
+          <span>Database Systems</span>
+        </div>
+        <div class="progress-line dbsystems">
+          <span></span>
+        </div>
+      </div>
+      <div class="bar">
+        <div class="info">
+          <span>REST Applications</span>
+        </div>
+        <div class="progress-line rest">
+          <span></span>
+        </div>
+      </div>
+  </div>
+</div>
+    <!-- Timeline -->
     <div class="timeline" id="timeline">
         <div class="container left">
           <div class="content">
             <h2>2017</h2>
-            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+            <ul>
+              <li>Grade 12 National Senior Certificate: 
+                Hoërskool Zwartkop </li>
+              <li>Computer Talent Search Bronze Certificate</li>
+              <li>Advanced Mathematics Certificate</li>
+              <li>Certificate for Merits</li>
+            </ul>
           </div>
         </div>
         <div class="container right">
           <div class="content">
-            <h2>2016</h2>
-            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+            <h2>2019</h2>
+           <p>Golden Key International Honours Society Certificate</p>
           </div>
         </div>
         <div class="container left">
           <div class="content">
-            <h2>2015</h2>
-            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+            <h2>2021</h2>
+           <p>Bsc Computer Science Certificate (University of the Pretoria)</p>
           </div>
         </div>
-        <div class="container right">
-          <div class="content">
-            <h2>2012</h2>
-            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-          </div>
-        </div>
-        <div class="container left">
-          <div class="content">
-            <h2>2011</h2>
-            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-          </div>
-        </div>
-        <div class="container right">
-          <div class="content">
-            <h2>2007</h2>
-            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-          </div>
-        </div>
-      </div> -->
+      </div> 
 
     <!-- Site footer -->
     <footer class="site-footer">
@@ -165,13 +256,17 @@
             <div class="col-sm-12 col-md-6">
             <h6>About</h6>
             <p class="text-justify">This website was designed by Pierre du Plessis, for future employment purposes.</p>
+            <h6>Contact Me</h6>
+            <ul style="list-style: none;">
+              <li>Cell:   072 593 4939</li>
+              <li>Email:   pierregduplessis@gmail.com</li>
+            </ul>
             </div>
 
             <div class="col-xs-6 col-md-3">
             <h6>Quick Links</h6>
             <ul class="footer-links">
-                <li><a href="">Contact</a></li>
-                <li><a href="">Work Experience</a></li>
+                <li><a href="">Timeline</a></li>
                 <li><a href="">Skills</a></li>
                 <li><a href="">About Me</a></li>
             </ul>

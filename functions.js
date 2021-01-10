@@ -1,13 +1,47 @@
-function btn_active(){
-    document.querySelector('.texto_centro').className = "texto_centro active_txt";
-      document.querySelector('.cont_centrar').className = "cont_centrar activebtn";
-      setTimeout(function(){
-          document.querySelector('.cont_centrar').className = "cont_centrar activebtn_fin";
-        document.querySelector('.texto_centro').className = "texto_centro op_0";
-      },15000);
+//---------------------------------------Scrolling function---------------------------------------------
+var lastScrollTop;
+var scrollLock;
+var pageHeight;
+
+window.onscroll = function() {myFunction(null)};
+
+function myFunction(hash) {
+    // Using jQuery's animate() method to add smooth page scroll
+    var st = document.body.scrollTop || document.documentElement.scrollTop;
+    
+    if(hash != null && !scrollLock)
+    {
+      scrollLock = true;
+     $('html, body').scrollTop = $(hash).offset().top;
+     lastScrollTop = $(hash).offset().top;
+     setTimeout(() => { scrollLock = false;  }, 70);
+    }
+    else{
+    if (st > lastScrollTop && !scrollLock){
+      lastScrollTop = pageHeight + st;
+      scrollLock = true;
+      $('html, body').animate({
+        scrollTop: pageHeight + st
+      }, 800, function() {scrollLock = false;} );
     }
 
+    if(st < lastScrollTop && !scrollLock){
+      lastScrollTop = st - pageHeight;
+      scrollLock = true;
+      $('html, body').animate({
+        scrollTop: st - pageHeight
+      }, 800, function() {scrollLock = false;} );
+    }
+  }
+}
+
+window.onresize = function() {pageHeight = window.innerHeight;}
+
     $(document).ready(function(){
+      lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      scrollLock = false;
+      
+      pageHeight = window.innerHeight;
       // Add smooth scrolling to all links
       $("a").on('click', function(event) {
     
@@ -18,16 +52,11 @@ function btn_active(){
     
           // Store hash
           var hash = this.hash;
-    
-          // Using jQuery's animate() method to add smooth page scroll
-          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 800, function(){
+
+          myFunction(hash);
+          
+          window.location.hash = hash;
        
-            // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash;
-          });
         } // End if
       });
     });

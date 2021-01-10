@@ -14,6 +14,7 @@ img.selfie {
   margin: 0em;
   filter: grayscale(100%);
   border-right: solid;
+  border-bottom: solid;
   border-color: white;
 }
 
@@ -128,9 +129,9 @@ div.circle {
 
 ::-webkit-scrollbar
 {
-  width: 12px;
-  border-radius: 10px;
-  background-color: #F5F5F5; 
+  display: none;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 ::-webkit-scrollbar-thumb
@@ -190,11 +191,11 @@ div.circle {
 }
 .footer-links a
 {
-  color:#737373
+  color:#9c9c9c
 }
 .footer-links a:active,.footer-links a:focus,.footer-links a:hover
 {
-  color:#3366cc;
+  color:#cc3333;
   text-decoration:none;
 }
 .footer-links.inline li
@@ -347,10 +348,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c5deea', end
   text-align: center;
 }
 
-.active_txt {
-animation: text_anim 0.3s infinite  alternate;  
-}
-
 #svg4174 {
   position: absolute;
   top:0%;
@@ -358,174 +355,10 @@ animation: text_anim 0.3s infinite  alternate;
   width: 28%;
   border-radius: 4em;
 }
-.activebtn_fin   #rect4147 {  
-  transition: all 0.5s;
-      stroke-dashoffset: 0px; 
-  stroke-dasharray: 800px,800px;
-}
-.activebtn   #rect4147 {  
-stroke-dashoffset: 800px; 
-  stroke-dasharray: 0px,800px;
-  transition: all 2s;
-  animation: dash_movimiento 15s 1 alternate;
-    -webkit-animation-timing-function: linear;   
- animation-timing-function: linear;  
-animation-delay: 2s;
-}
   #rect4147 {  
    stroke-dashoffset: 0px; 
   stroke-dasharray: 800px,800px;
 
-}
-
-
-@-webkit-keyframes dash_movimiento {
- 0% { stroke-dashoffset: 800; 
-  stroke-dasharray: 0px;
-   }
-
-   100% { 
-    stroke-dashoffset: 0px; 
-  stroke-dasharray: 800px,800px;
-  }
-
-}
-@-o-keyframes dash_movimiento {
- 0% { stroke-dashoffset: 800; 
-  stroke-dasharray: 100px;
-   }
-
-   100% { 
-    stroke-dashoffset: 0px; 
-  stroke-dasharray: 800px,800px;
-  }
-
-}
-@-moz-keyframes dash_movimiento {
- 0% { stroke-dashoffset: 800; 
-  stroke-dasharray: 100px;
-   }
-
-   100% { 
-    stroke-dashoffset: 0px; 
-  stroke-dasharray: 800px,800px;
-  }
-}
-@keyframes dash_movimiento {
-  0% {
-    stroke-dashoffset: 800px; 
-  stroke-dasharray:0px,800px;
-   }
-
-   10% { 
-    stroke-dashoffset: 700px; 
-  stroke-dasharray:100px,800px;
-  }
-
-   20% { 
-   stroke-dashoffset: 600px; 
-  stroke-dasharray:200px,800px;
-  }
-   30% { 
-   stroke-dashoffset: 500px; 
-  stroke-dasharray:300px,800px;
-  }
-  40% { 
-   stroke-dashoffset: 400px; 
-  stroke-dasharray:400px,800px; 
-  }
-   50% { 
-   stroke-dashoffset: 300px; 
-  stroke-dasharray:500px,800px;
-  }
-   60% { 
-   stroke-dashoffset: 200px; 
-  stroke-dasharray:600px,800px;
-  }
-   70% { 
-   stroke-dashoffset: 100px; 
-  stroke-dasharray:700px,800px;
-
-  }
-   80% { 
-   stroke-dashoffset: 50px; 
-  stroke-dasharray:750px,800px;
-
-  }
-   90% { 
-   stroke-dashoffset: 25px; 
-  stroke-dasharray:770px,800px;
-  }
-   100% { 
-    stroke-dashoffset: 0px; 
-  stroke-dasharray: 800px,800px;
-  }
- 
-}
-
-
-@-webkit-keyframes text_anim {
- 0% {
-   transform: scale(1);
-   }
-
-   100% { 
-  transform: scale(1.05);
-  }
-
-}
-@-o-keyframes text_anim {
- 0% {
-   transform: scale(1);
-   }
-
-   100% { 
-  transform: scale(1.05);
-  }
-
-}
-@-moz-keyframes text_anim {
- 0% {
-   transform: scale(1);
-   }
-
-   100% { 
-  transform: scale(1.05);
-  }
-}
-@keyframes text_anim {
-  0% {
-    transform: scale(1);
-   }
-
-   100% { 
-  transform: scale(1.05);
-  }
- 
-}
-
-#path4138 {
-      stroke-dashoffset: 30px;
-    stroke-dasharray: 30px,30px;
-  transition: all 0.5s;
-  opacity: 0;
-}
-
-.activebtn_fin #path4138 {
-  stroke-dashoffset: 0px;
-  transition-delay: 0.5s;
-  opacity: 1;
-}
-
-.op_0 {
-  transition: all 0.5s;
-  opacity: 0;
-}
-
-  #svg2{
-    left: 46%;
-    position: absolute;
-    top: 33px;
 }
 
 /* Time Line */
@@ -538,7 +371,7 @@ animation-delay: 2s;
   margin: 0em;
   margin-top: 2em;
   margin-bottom: 2em;
-  min-height: 100vh;
+  min-height: 63.5vh;
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -662,27 +495,222 @@ animation-delay: 2s;
 }
 
 /* Skill bars */
-.skillbar {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+::selection{
+  color: #fff;
+  background: #6665ee;
+}
+
+.skill-bar-page{
   min-height: 100vh;
 }
 
-.skillbar .container {
-  width: 70%;
-  background-color: #ddd;
+.skill-bars{
+  float: left;
+  margin-top: 25vh;
+  margin-bottom: 5vh;
+  margin-left: 2.5%;
+  padding: 25px 30px;
+  width: 30%;
+  background: #fff;
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+  border-radius: 10px;
 }
 
-.skillbar p, .skillbar h1{
-  color: white;
+.skill-bars h1{
+  font-size: 3vh;
 }
 
-.skills {
-  text-align: right;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  color: white;
+.skill-bars .bar{
+  margin: 20px 0;
+}
+.skill-bars .bar:first-child{
+  margin-top: 0px;
+}
+.skill-bars .bar .info{
+  margin-bottom: 5px;
+}
+.skill-bars .bar .info span{
+  font-weight: 500;
+  font-size: 17px;
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText {
+  100%{
+    opacity: 1;
+  }
+}
+.skill-bars .bar .progress-line{
+  height: 10px;
+  width: 100%;
+  background: #f0f0f0;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
+              0 1px rgba(255,255,255,0.8);
+  animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.bar .progress-line span{
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #f54444;
+  animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
 }
 
-.html {width: 90%; background-color: #4CAF50;}
-.css {width: 80%; background-color: #2196F3;}
-.js {width: 65%; background-color: #f44336;}
-.php {width: 60%; background-color: #808080;}
+.bar .progress-line.html span{
+  width: 90%;
+}
+.bar .progress-line.css span{
+  width: 60%;
+}
+.bar .progress-line.xml span{
+  width: 90%;
+}
+.bar .progress-line.ruby span{
+  width: 65%;
+}
+.bar .progress-line.php span{
+  width: 65%;
+}
+.bar .progress-line.nodejs span{
+  width: 80%;
+}
+
+.bar .progress-line.c_plus span{
+  width: 90%;
+}
+.bar .progress-line.java span{
+  width: 90%;
+}
+.bar .progress-line.delphi span{
+  width: 90%;
+}
+.bar .progress-line.assembly span{
+  width: 60%;
+}
+.bar .progress-line.sql span{
+  width: 89%;
+}
+.bar .progress-line.cobol span{
+  width: 40%;
+}
+
+.bar .progress-line.cybersec span{
+  width: 80%;
+}
+.bar .progress-line.networks span{
+  width: 65%;
+}
+.bar .progress-line.ai span{
+  width: 50%;
+}
+.bar .progress-line.mobiledev span{
+  width: 72%;
+}
+.bar .progress-line.dbsystems span{
+  width: 90%;
+}
+.bar .progress-line.rest span{
+  width: 60%;
+}
+
+
+.progress-line span::before{
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+.progress-line span::after{
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-weight: 500;
+  background: #000;
+  color: #fff;
+  padding: 1px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+@keyframes showText2 {
+  100%{
+    opacity: 1;
+  }
+}
+.progress-line.html span::after{
+  content: "90%";
+}
+.progress-line.css span::after{
+  content: "90%";
+}
+.progress-line.xml span::after{
+  content: "90%";
+}
+.progress-line.ruby span::after{
+  content: "65%";
+}
+.progress-line.php span::after{
+  content: "65%";
+}
+.progress-line.nodejs span::after{
+  content: "80%";
+}
+
+.progress-line.c_plus span::after{
+  content: "90%";
+}
+.progress-line.java span::after{
+  content: "90%";
+}
+.progress-line.delphi span::after{
+  content: "90%";
+}
+.progress-line.assembly span::after{
+  content: "60%";
+}
+.progress-line.sql span::after{
+  content: "89%";
+}
+.progress-line.cobol span::after{
+  content: "40%";
+}
+
+.progress-line.cybersec span::after{
+  content: "80%";
+}
+.progress-line.networks span::after{
+  content: "65%";
+}
+.progress-line.ai span::after{
+  content: "50%";
+}
+.progress-line.mobiledev span::after{
+  content: "60%";
+}
+.progress-line.dbsystems span::after{
+  content: "90%";
+}
+.progress-line.rest span::after{
+  content: "60%";
+}
