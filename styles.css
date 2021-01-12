@@ -3,6 +3,10 @@ body{
     margin: 0em;
 }
 
+html, body {
+  overflow: hidden;
+}
+
 .imgbox {
   display: grid;
   height: 100%;
@@ -20,12 +24,13 @@ img.selfie {
 
 /* Navbar */
 ul.navbar {
+    z-index: 1;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     right: 0;
-    position:absolute;
+    position:fixed;
     width: 100%;
     /*font-family: 'Courier New', monospace;*/
   }
@@ -129,9 +134,9 @@ div.circle {
 
 ::-webkit-scrollbar
 {
-  display: none;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+  display: none;
 }
 
 ::-webkit-scrollbar-thumb
@@ -407,7 +412,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c5deea', end
   border: 4px solid #ff0000;
   top: 15px;
   border-radius: 50%;
-  z-index: 1;
+  z-index: 2;
 }
 
 /* Place the container to the left */
@@ -427,7 +432,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c5deea', end
   position: absolute;
   top: 22px;
   width: 0;
-  z-index: 1;
+  z-index: 2;
   right: 30px;
   border: medium solid white;
   border-width: 10px 0 10px 10px;
@@ -441,7 +446,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c5deea', end
   position: absolute;
   top: 22px;
   width: 0;
-  z-index: 1;
+  z-index: 2;
   left: 30px;
   border: medium solid white;
   border-width: 10px 10px 10px 0;
